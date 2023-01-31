@@ -1,5 +1,5 @@
 if [[ "$MODE" = "webscan" ]]; then
-	echo -e "$OKRED ::::::::::: Bruttrack automation script ::::::::::::::: $RESET"
+    echo -e "$OKRED ::::::::::: Bruttrack automation script ::::::::::::::: $RESET"
     echo -e "$OKRED                   ______                                $RESET"
     echo -e "$OKRED                .-        -.                             $RESET"
     echo -e "$OKRED               /       *    \             by @W3Security $RESET"                          
