@@ -1,22 +1,34 @@
-FROM alpine:3.9
-LABEL MAINTAINER W3Security | alerts@log4j.codes
+FROM kalilinux/kali-rolling
 
-RUN apk update && \
-    apk upgrade
+LABEL org.label-schema.name='Bruttrack - Kali Linux' \
+    org.label-schema.description='Automated pentest framework for offensive security experts' \
+    org.label-schema.usage='https://github.com/W3Security/Bruttrack' \
+    org.label-schema.url='https://github.com/W3Security/Bruttrack' \
+    org.label-schema.vendor='https://sn1persecurity.com' \
+    org.label-schema.schema-version='1.0' \
+    org.label-schema.docker.cmd.devel='docker run --rm -ti W3Security/Bruttrack' \
+    MAINTAINER="@w3security"
 
-RUN apk add --no-cache python3 && \
-    python3 -m ensurepip && \
-    rm -r /usr/lib/python*/ensurepip && \
-    pip3 install --upgrade pip setuptools && \
-    if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi && \
-    if [[ ! -e /usr/bin/python ]]; then ln -sf /usr/bin/python3 /usr/bin/python; fi && \
-    rm -r /root/.cache
+RUN echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" > /etc/apt/sources.list && \
+    echo "deb-src http://http.kali.org/kali kali-rolling main contrib non-free" >> /etc/apt/sources.list
+ENV DEBIAN_FRONTEND noninteractive
 
-RUN apk add git
-RUN git clone https://github.com/w3security/Bruttrack.git /tmp/bruttrack
+RUN set -x \
+        && apt-get -yqq update \
+        && apt-get -yqq dist-upgrade \
+        && apt-get clean
+RUN apt-get install -y metasploit-framework
 
-WORKDIR /tmp/bruttrack
+RUN sed -i 's/systemctl status ${PG_SERVICE}/service ${PG_SERVICE} status/g' /usr/bin/msfdb && \
+    service postgresql start && \
+    msfdb reinit
 
-RUN pip3 install -r requirements.txt
+RUN apt-get --yes install git \
+    && mkdir -p security \
+    && cd security \
+    && git clone https://github.com/W3Security/Bruttrack.git \
+    && cd Bruttrack \
+    && ./install.sh \
+    && sniper -u force
 
-ENTRYPOINT ["python3", "Bruttrack.py"]
+CMD ["bash"]
