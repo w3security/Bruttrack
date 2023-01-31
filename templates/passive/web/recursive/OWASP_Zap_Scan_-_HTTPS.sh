@@ -1,6 +1,6 @@
 AUTHOR='w3security'
-VULN_NAME='OWASP Zap Scan - HTTP'
-FILENAME="$LOOT_DIR/web/zap-report-${TARGET}-http.html"
+VULN_NAME='OWASP Zap Scan - HTTPS'
+FILENAME="$LOOT_DIR/web/zap-report-${TARGET}-https.html"
 OUTPUT_NAME=$(echo $VULN_NAME | sed -E 's/[^[:alnum:]]+/_/g')
 
 rm -f $LOOT_DIR/vulnerabilities/sc0pe-$TARGET-$OUTPUT_NAME.txt 2> /dev/null
