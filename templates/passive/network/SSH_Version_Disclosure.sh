@@ -1,0 +1,9 @@
+AUTHOR='w3security'
+VULN_NAME='SSH Version Disclosure'
+FILENAME="$LOOT_DIR/output/msf-$TARGET-*-ssh_version.txt"
+MATCH="\[\+\]"
+SEVERITY='P4 - LOW'
+GREP_OPTIONS='-i'
+SEARCH='positive'
+SECONDARY_COMMANDS=''
+TYPE="network"

@@ -1,0 +1,9 @@
+AUTHOR='w3security'
+VULN_NAME='Default Credentials - NMap'
+FILENAME="$LOOT_DIR/output/nmap-$TARGET.txt $LOOT_DIR/output/nmap-$TARGET-*.txt"
+MATCH="Valid\ credentials"
+SEVERITY='P1 - CRITICAL'
+GREP_OPTIONS='-i'
+SEARCH='positive'
+SECONDARY_COMMANDS=''
+TYPE="network"
