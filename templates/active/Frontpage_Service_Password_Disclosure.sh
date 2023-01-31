@@ -1,0 +1,9 @@
+AUTHOR='w3security'
+VULN_NAME='Frontpage Service Password Disclosure'
+URI='/_vti_pvt/service.pwd'
+METHOD='GET'
+MATCH=' Frontpage'
+SEVERITY='P2 - HIGH'
+CURL_OPTS="--user-agent '' -s -L --insecure"
+SECONDARY_COMMANDS=''
+GREP_OPTIONS='-i'

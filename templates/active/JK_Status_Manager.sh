@@ -1,0 +1,9 @@
+AUTHOR='w3security'
+VULN_NAME='JK Status Manager'
+URI='/jkstatus/'
+METHOD='GET'
+MATCH="JK\ Status\ Manager"
+SEVERITY='P5 - INFO'
+CURL_OPTS="--user-agent '' -s -L --insecure"
+SECONDARY_COMMANDS=''
+GREP_OPTIONS='-i'

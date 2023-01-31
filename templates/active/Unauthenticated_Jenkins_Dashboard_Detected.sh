@@ -1,0 +1,9 @@
+AUTHOR='w3security'
+VULN_NAME='Unauthenticated Jenkins Dashboard Detected'
+URI='/'
+METHOD='GET'
+MATCH="\[Jenkins\]"
+SEVERITY='P2 - HIGH'
+CURL_OPTS="--user-agent '' -s -L --insecure"
+SECONDARY_COMMANDS=''
+GREP_OPTIONS='-i'

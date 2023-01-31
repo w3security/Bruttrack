@@ -1,0 +1,9 @@
+AUTHOR='w3security'
+VULN_NAME='Robots.txt Detected'
+URI='/robots.txt'
+METHOD='GET'
+MATCH='Disallow\:|Allow\:|Sitemap\:'
+SEVERITY='P5 - INFO'
+CURL_OPTS="--user-agent '' -s -L --insecure"
+SECONDARY_COMMANDS=''
+GREP_OPTIONS='-i'
