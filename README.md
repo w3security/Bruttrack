@@ -1,3 +1,23 @@
+                        function logo {
+                          echo -e "$OKRED
+                            echo -e "$OKRED ::::::::::: Bruttrack automation script ::::::::::::::: $RESET"
+                            echo -e "$OKRED                   ______                                $RESET"
+                            echo -e "$OKRED                .-        -.                             $RESET"
+                            echo -e "$OKRED               /       *    \             by @W3Security $RESET"                          
+                            echo -e "$OKRED              |,  .-.  .-.  ,|        *                  $RESET"
+                            echo -e "$OKRED     *        | )(_ /  \_ )( |                           $RESET"
+                            echo -e "$OKRED              |/     /\     \|    *                      $RESET"
+                            echo -e "$OKRED    (@_       <__    ^^    __>         *                 $RESET"
+                            echo -e "$OKRED     ) \_______\__|IIIIII|__/___________________________ $RESET" 
+                            echo -e "$OKRED (_)@8@8{}<_____________________________________________>$RESET"  
+                            echo -e "$OKRED     )_/         \ IIIIII /                    :::::     $RESET"
+                            echo -e "$OKRED    (@            --------                        ::     $RESET"
+                            echo -e "$OKRED                                                         $RESET"
+                            echo -e "$OKRED ________________[ Bruttrack - End-Pont Security Scanner]$RESET"
+                            echo -e "$OKRED ::::::::::::::::::::::::::::::::::::::::::::::::::::::::$RESET"
+                            echo ""
+                        }
+
 
 ## Kali/Ubuntu/Debian/Parrot Linux Install
 ```
