@@ -1,4 +1,4 @@
-AUTHOR='@w3security'
+AUTHOR='w3security'
 VULN_NAME='Apache Tomcat Detected'
 URI='/404_DOES_NOT_EXIST'
 METHOD='GET'

@@ -1,8 +1,8 @@
 AUTHOR='w3security'
-VULN_NAME='Apache Solr Detected'
-URI=''
+VULN_NAME='Citrix VPN Detected'
+URI='/vpn/index.html'
 METHOD='GET'
-MATCH="Solr\ Admin"
+MATCH="Netscaler\ Gateway"
 SEVERITY='P5 - INFO'
 CURL_OPTS="--user-agent '' -s -L --insecure"
 SECONDARY_COMMANDS=''

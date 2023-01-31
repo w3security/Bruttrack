@@ -1,8 +1,8 @@
 AUTHOR='w3security'
-VULN_NAME='Apache Solr Detected'
-URI=''
+VULN_NAME='Cisco VPN Detected'
+URI='/+CSCOE+/win.js'
 METHOD='GET'
-MATCH="Solr\ Admin"
+MATCH="CSCO_WebVPN"
 SEVERITY='P5 - INFO'
 CURL_OPTS="--user-agent '' -s -L --insecure"
 SECONDARY_COMMANDS=''

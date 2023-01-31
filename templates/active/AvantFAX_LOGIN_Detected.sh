@@ -1,8 +1,8 @@
 AUTHOR='w3security'
-VULN_NAME='Apache Solr Detected'
+VULN_NAME='AvantFAX LOGIN Detected'
 URI=''
 METHOD='GET'
-MATCH="Solr\ Admin"
+MATCH="AvantFAX\ LOGIN"
 SEVERITY='P5 - INFO'
 CURL_OPTS="--user-agent '' -s -L --insecure"
 SECONDARY_COMMANDS=''

@@ -1,8 +1,8 @@
 AUTHOR='w3security'
-VULN_NAME='Apache Solr Detected'
+VULN_NAME='AWS S3 Public Bucket Listing'
 URI=''
 METHOD='GET'
-MATCH="Solr\ Admin"
+MATCH="listbucket"
 SEVERITY='P5 - INFO'
 CURL_OPTS="--user-agent '' -s -L --insecure"
 SECONDARY_COMMANDS=''

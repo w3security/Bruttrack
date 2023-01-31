@@ -1,9 +1,9 @@
 AUTHOR='w3security'
-VULN_NAME='Apache Solr Detected'
-URI=''
+VULN_NAME='cPanel Login Found 2'
+URI=':2083/'
 METHOD='GET'
-MATCH="Solr\ Admin"
+MATCH="cPanel\ Login"
 SEVERITY='P5 - INFO'
 CURL_OPTS="--user-agent '' -s -L --insecure"
 SECONDARY_COMMANDS=''
-GREP_OPTIONS='-i'
+GREP_OPTIONS=''
