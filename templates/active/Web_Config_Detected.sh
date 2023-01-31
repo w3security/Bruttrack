@@ -1,0 +1,9 @@
+AUTHOR='w3security'
+VULN_NAME='Web Config Detected 1'
+URI='/web.config'
+METHOD='GET'
+MATCH='<configuration>'
+SEVERITY='P4 - LOW'
+CURL_OPTS="-L --user-agent '' -s --insecure"
+SECONDARY_COMMANDS=''
+GREP_OPTIONS='-i'
