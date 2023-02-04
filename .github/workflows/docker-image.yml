@@ -16,7 +16,6 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
         registry: docker.pkg.github.com
         repository: ${{ github.repository }}/Bruttrack
-        tags: latest, ${{ github.run_number }}
         
     - name: publish to dockerhub
       uses: docker/build-push-action@v1
@@ -24,4 +23,4 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: w3security/bruttrack
-        tags: latest, ${{ github.run_number }}
+
