@@ -22,7 +22,7 @@ source $INSTALL_DIR/bruttrack.conf
 echo -e "$OKBLUE[*]$RESET Loaded configuration file from $INSTALL_DIR/bruttrack.conf $OKBLUE[$RESET${OKGREEN}OK${RESET}$OKBLUE]$RESET"
 
 if [[ -f /root/.bruttrack.conf ]]; then
-  # LOAD USER BRUTTRACK CONFIGURATION FILE
+  # LOAD USER bruttrack CONFIGURATION FILE
   dos2unix /root/.bruttrack.conf 2> /dev/null > /dev/null
   source /root/.bruttrack.conf
   echo -e "$OKBLUE[*]$RESET Loaded configuration file from /root/.bruttrack.conf $OKBLUE[$RESET${OKGREEN}OK${RESET}$OKBLUE]$RESET"
@@ -145,23 +145,25 @@ function help {
 }
 
 function logo {
-  echo -e "$OKRED
-    echo -e "$OKRED ::::::::::: Bruttrack automation script ::::::::::::::: $RESET"
-    echo -e "$OKRED                   ______                                $RESET"
-    echo -e "$OKRED                .-        -.                             $RESET"
-    echo -e "$OKRED               /       *    \             by @W3Security $RESET"                          
-    echo -e "$OKRED              |,  .-.  .-.  ,|        *                  $RESET"
-    echo -e "$OKRED     *        | )(_ /  \_ )( |                           $RESET"
-    echo -e "$OKRED              |/     /\     \|    *                      $RESET"
-    echo -e "$OKRED    (@_       <__    ^^    __>         *                 $RESET"
-    echo -e "$OKRED     ) \_______\__|IIIIII|__/___________________________ $RESET" 
-    echo -e "$OKRED (_)@8@8{}<_____________________________________________>$RESET"  
-    echo -e "$OKRED     )_/         \ IIIIII /                    :::::     $RESET"
-    echo -e "$OKRED    (@            --------                        ::     $RESET"
-    echo -e "$OKRED                                                         $RESET"
-    echo -e "$OKRED ________________[ Bruttrack - End-Pont Security Scanner]$RESET"
-    echo -e "$OKRED ::::::::::::::::::::::::::::::::::::::::::::::::::::::::$RESET"
-    echo ""
+  echo -e "$OKRED ::::::::::: Bruttrack automation script ::::::::::::::: $RESET"
+  echo -e "$OKRED                   ______                                $RESET"
+  echo -e "$OKRED                .-        -.                             $RESET"
+  echo -e "$OKRED               /       *    \             by @W3Security $RESET"                          
+  echo -e "$OKRED              |,  .-.  .-.  ,|        *                  $RESET"
+  echo -e "$OKRED     *        | )(_ /  \_ )( |                           $RESET"
+  echo -e "$OKRED              |/     /\     \|    *                      $RESET"
+  echo -e "$OKRED    (@_       <__    ^^    __>         *                 $RESET"
+  echo -e "$OKRED     ) \_______\__|IIIIII|__/___________________________ $RESET" 
+  echo -e "$OKRED (_)@8@8{}<_____________________________________________>$RESET"  
+  echo -e "$OKRED     )_/         \ IIIIII /                    :::::     $RESET"
+  echo -e "$OKRED    (@            --------                        ::     $RESET"
+  echo -e "$OKRED                                                         $RESET"
+  echo -e "$OKRED ________________[ Bruttrack - End-Pont Security Scanner]$RESET"
+  echo -e "$OKRED ::::::::::::::::::::::::::::::::::::::::::::::::::::::::$RESET"
+  echo ""
+  echo -e "$OKORANGE + -- --=[ https://log4j.codes$RESET"
+  echo -e "$OKORANGE + -- --=[ bruttrack v$VER by @w3security$RESET"
+  echo ""
 }
 
 function bruttrack_status {
@@ -513,24 +515,13 @@ function init {
 
 function loot {
   if [[ ! $LOOT == "0" ]]; then
-    echo -e "$OKRED
-    echo -e "$OKRED ::::::::::: Bruttrack automation script ::::::::::::::: $RESET"
-    echo -e "$OKRED                   ______                                $RESET"
-    echo -e "$OKRED                .-        -.                             $RESET"
-    echo -e "$OKRED               /       *    \             by @W3Security $RESET"                          
-    echo -e "$OKRED              |,  .-.  .-.  ,|        *                  $RESET"
-    echo -e "$OKRED     *        | )(_ /  \_ )( |                           $RESET"
-    echo -e "$OKRED              |/     /\     \|    *                      $RESET"
-    echo -e "$OKRED    (@_       <__    ^^    __>         *                 $RESET"
-    echo -e "$OKRED     ) \_______\__|IIIIII|__/___________________________ $RESET" 
-    echo -e "$OKRED (_)@8@8{}<_____________________________________________>$RESET"  
-    echo -e "$OKRED     )_/         \ IIIIII /                    :::::     $RESET"
-    echo -e "$OKRED    (@            --------                        ::     $RESET"
-    echo -e "$OKRED                                                         $RESET"
-    echo -e "$OKRED ________________[ Bruttrack - End-Pont Security Scanner]$RESET"
-    echo -e "$OKRED ::::::::::::::::::::::::::::::::::::::::::::::::::::::::$RESET"
+    echo -e "$OKRED                ____               $RESET"
+    echo -e "$OKRED    _________  /  _/___  ___  _____$RESET"
+    echo -e "$OKRED   / ___/ __ \ / // __ \/ _ \/ ___/$RESET"
+    echo -e "$OKRED  (__  ) / / // // /_/ /  __/ /    $RESET"
+    echo -e "$OKRED /____/_/ /_/___/ .___/\___/_/     $RESET"
+    echo -e "$OKRED               /_/                 $RESET"
     echo ""
-    
     if [[ ! -z $WORKSPACE_DIR ]]; then
       LOOT_DIR=$WORKSPACE_DIR
     fi
@@ -613,7 +604,7 @@ function loot {
         PRE_NAME=$(echo $WORKSPACE | sed "s/\./-/g")
         sed -i "s/notepad/notepad-$PRE_NAME/g" "$LOOT_DIR/notes/notepad.html" 2> /dev/null
       fi
-      if [[ "$BRUTTRACK_AUTOLOAD" = "1" ]] && [[ ! -f "$INSTALL_DIR/pro/settings.php" ]]; then
+      if [[ "$bruttrack_AUTOLOAD" = "1" ]] && [[ ! -f "$INSTALL_DIR/pro/settings.php" ]]; then
           echo -e "$OKORANGE + -- --=[ Loading bruttrack Professional...$RESET"
           source $INSTALL_DIR/pro.sh
           sudo $LAST_USER -c $BROWSER $LOOT_DIR/bruttrack-report.html 2> /dev/null > /dev/null &
