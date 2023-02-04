@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=bruttrack
+Encoding=UTF-8
+Exec=bash-wrapper "sudo bruttrack"
+Icon=/usr/share/pixmaps/bruttrack.png
+StartupNotify=false 
+Terminal=true
+Type=Application
+Categories=08-exploitation-tools;02-vulnerability-analysis;01-info-gathering;
+X-Kali-Package=Bruttrack
+Comment=
+Path=
