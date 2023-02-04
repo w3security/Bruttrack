@@ -31,6 +31,6 @@ RUN apt-get --yes install git \
     && cd Bruttrack \
     && chmod +x install.sh \
     && ./install.sh \
-    && sniper -u force
+    && bruttrack -u force
 
 CMD ["bash"]
