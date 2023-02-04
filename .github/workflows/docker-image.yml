@@ -1,0 +1,27 @@
+name: Docker Image CI
+
+on: push
+
+jobs:
+  build-container:
+    name: Build Docker Container Image
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+    - name: Publish github to Docker image
+      uses: docker/build-push-action@v1
+      with:
+        username: ${{ github.actore }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+        registry: docker.pkg.github.com
+        repository: ${{ github.repository }}/Bruttrack
+        tags: latest, ${{ github.run_number }}
+        
+    - name: publish to dockerhub
+      uses: docker/build-push-action@v1
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        repository: w3security/bruttrack
+        tags: latest, ${{ github.run_number }}
