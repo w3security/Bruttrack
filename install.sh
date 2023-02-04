@@ -367,7 +367,7 @@ cd /usr/share/arachni/bin/
 for a in `ls`; do ln -fs $PWD/$a /usr/bin/$a; done;
 
 # REMOVE CVE TEMPLATES (ALL CVEs GOING FORWARD COVERED BY NUCLEI)
-rm -f /usr/share/sniper/templates/active/CVE*
+rm -f /usr/share/bruttrack/templates/active/CVE*
 
 # PHANTOMJS MANUAL INSTALL
 echo -e "$OKBLUE[*]$RESET Installing PhantomJS...$RESET"
@@ -380,7 +380,7 @@ ln -s /usr/local/share/phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/bin/phant
 
 # DNS RESOLVERS DOWNLOAD
 echo -e "$OKBLUE[*]$RESET Installing DNS Resolvers...$RESET"
-wget https://raw.githubusercontent.com/janmasarik/resolvers/master/resolvers.txt -O /usr/share/sniper/wordlists/resolvers.txt
+wget https://raw.githubusercontent.com/janmasarik/resolvers/master/resolvers.txt -O /usr/share/bruttrack/wordlists/resolvers.txt
 
 # THEHARVESTER KALI SETUP
 echo -e "$OKBLUE[*]$RESET Installing TheHarvester...$RESET"
@@ -417,7 +417,7 @@ mkdir $LOOT_DIR/nmap -p 2> /dev/null
 mkdir $LOOT_DIR/domains -p 2> /dev/null
 mkdir $LOOT_DIR/output -p 2> /dev/null
 mkdir $LOOT_DIR/reports -p 2> /dev/null
-chmod +x $INSTALL_DIR/sniper
+chmod +x $INSTALL_DIR/bruttrack
 chmod +x $PLUGINS_DIR/Goohak/goohak
 rm -f /usr/bin/dirsearch
 ln -s $INSTALL_DIR/bruttrack /usr/bin/bruttrack 2> /dev/null
@@ -428,7 +428,7 @@ ln -s /usr/share/Bruttrack /usr/share/Bruttrack 2> /dev/null
 ln -s /usr/share/bruttrack/loot/workspace /workspace 2> /dev/null
 ln -s /usr/share/bruttrack/loot/workspace /root/workspace 2> /dev/null
 ln -s /usr/share/bruttrack /root/bruttrack 2> /dev/null
-ln -s /root/.bruttrack.conf /usr/share/sniper/conf/bruttrack.conf 2> /dev/null
+ln -s /root/.bruttrack.conf /usr/share/bruttrack/conf/bruttrack.conf 2> /dev/null
 ln -s /root/.bruttrack_api_keys.conf /usr/share/bruttrack/conf/bruttrack_api_keys.conf 2> /dev/null
 mv /root/.bruttrack.conf /root/.bruttrack.conf.bak 2> /dev/null
 cp -vf /usr/share/bruttrack/bruttrack.conf /root/.bruttrack.conf 2> /dev/null
@@ -453,4 +453,4 @@ ln -fs /usr/share/bruttrack/loot/workspaces/ /home/kali/Desktop/workspaces 2> /d
 ln -fs /usr/share/bruttrack/loot/workspaces/ /root/Desktop/workspaces 2> /dev/null
 
 echo -e "$OKRED[>]$RESET Done! $RESET"
-echo -e "$OKRED[>]$RESET To run, type 'sniper'! $RESET"
+echo -e "$OKRED[>]$RESET To run, type 'bruttrack'! $RESET"
