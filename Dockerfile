@@ -27,7 +27,9 @@ RUN apt-get --yes install git \
     && mkdir -p security \
     && cd security \
     && git clone https://github.com/W3Security/Bruttrack.git \
+    && chmod +x Bruttrack \
     && cd Bruttrack \
+    && chmod +x install.sh \
     && ./install.sh \
     && sniper -u force
 
