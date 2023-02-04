@@ -23,6 +23,7 @@ echo -e "$OKRED                                                         $RESET"
 echo -e "$OKRED ________________[ Bruttrack - End-Pont Security Scanner]$RESET"
 echo -e "$OKRED ::::::::::::::::::::::::::::::::::::::::::::::::::::::::$RESET"
 echo ""
+
 INSTALL_DIR=/usr/share/bruttrack
 LOOT_DIR=/usr/share/bruttrack/loot
 PLUGINS_DIR=/usr/share/bruttrack/plugins
