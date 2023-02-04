@@ -18,7 +18,7 @@ jobs:
         id: check
         uses: lucacome/docker-image-update-checker@v1
         with:
-          base-image: w3security/pihole:latest
+          base-image: w3security/bruttrack:latest
           image: w3security/bruttrack:latest
         if: ${{ github.event_name == 'schedule' }}
 
@@ -40,7 +40,7 @@ jobs:
         uses: docker/login-action@v1 
         with:
           username: ${{ secrets.DOCKER_USER }}
-          password: ${{ secrets.DOCKER_SECRET }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build and push
         uses: docker/build-push-action@v2
